@@ -1,0 +1,6 @@
+C:\Users\Acer\Desktop\PP2\week 1\Task 4\Task 4\Task 4\bin\Debug\Task 4.exe.config
+C:\Users\Acer\Desktop\PP2\week 1\Task 4\Task 4\Task 4\bin\Debug\Task 4.exe
+C:\Users\Acer\Desktop\PP2\week 1\Task 4\Task 4\Task 4\bin\Debug\Task 4.pdb
+C:\Users\Acer\Desktop\PP2\week 1\Task 4\Task 4\Task 4\obj\Debug\Task 4.csproj.CoreCompileInputs.cache
+C:\Users\Acer\Desktop\PP2\week 1\Task 4\Task 4\Task 4\obj\Debug\Task 4.exe
+C:\Users\Acer\Desktop\PP2\week 1\Task 4\Task 4\Task 4\obj\Debug\Task 4.pdb
