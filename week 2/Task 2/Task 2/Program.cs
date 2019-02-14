@@ -9,26 +9,50 @@ namespace Task_2
 {
     class Program
     {
+        // создаем функцию, которая проверяет является ли число простым или нет
+        public static bool Ex(int a)
+        {
+            int k = 0;
+            for (int j = 1; j <= a; j++)
+            {
+                if (a % j == 0)
+                {
+                    k++;
+
+                }
+            }
+            if (k == 2)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+        // создаем функцию, чтобы прочесть числа из файла
+        public static string Read()
+        {
+            StreamReader sr = new StreamReader("input.txt");
+            string s = sr.ReadToEnd();
+            sr.Close();
+            return s;
+        }
+
         static void Main(string[] args)
         {
-            StreamReader sr = new StreamReader(@"C:\Users\Acer\Desktop\PP2\week 2\Task 2\Task 2\bin\Debug\input.txt"); //create reader
-            string[] s = sr.ReadToEnd().Split();                                                                    //read a text file
-            StreamWriter sw = new StreamWriter(@"C:\Users\Acer\Desktop\PP2\week 2\Task 2\Task 2\bin\Debug\output.txt");//create writer
-            for (int i = 0; i < s.Length; i++)
-                if (Aprime(int.Parse(s[i])))                                                                        //check for prime
+            String s = Read();
+            string[] arr = s.Split();
+            // выводим все простые числа в другом файле
+            StreamWriter sw = new StreamWriter("output.txt");
+            for (int i = 0; i < arr.Length; i++)
+            {
+                if (Ex(int.Parse(arr[i])) == true)
                 {
-                    sw.Write(s[i] + " ");                                                                           //if yes write yes
+                    sw.Write(arr[i] + " ");
                 }
-            sw.Close();                                                                                             //and close for ending and saving
-        }
-        public static bool Aprime(int num)                                                                          //boolean function for check
-        {
-            if (num == 1)
-                return false;
-            for (int i = 2; i <= Math.Sqrt(num); i++)
-                if (num % i == 0)
-                    return false;
-            return true;
+            }
+            sw.Close();
         }
     }
 }
